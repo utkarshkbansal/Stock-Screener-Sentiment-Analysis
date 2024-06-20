@@ -7,7 +7,7 @@ This project includes a Python-based stock screener and AI-based sentiment analy
 ### Prerequisites
 
 - Python 3.x
-- Windows or MacOS machine
+- Windows/MacOS/Linux machine
 - pip (Python package installer)
 
 ### Installation
@@ -16,23 +16,34 @@ This project includes a Python-based stock screener and AI-based sentiment analy
    ```sh
    git clone https://github.com/your-username/stock-screener-sentiment-analysis.git
    cd stock-screener-sentiment-analysis
-2. **Create an activate a virtual environment**
+2. **Create a virtual environment**
    ```sh
     python -m venv venv
+   ```
+3. **Activate the virtual environment based on your machine**
+   ```sh
     source venv/bin/activate   # On macOS/Linux
+   ```
+   ```sh
     .\venv\Scripts\activate    # On Windows
-3. **Install the dependencies**
-    ```
+   ```
+4. **Install the dependencies**
+    ```sh
     - pip install -r requirements.txt
+    ```
 ### Usage
 
 **Run the stock screener script:**
+  ```sh
   python stock_screener.py
-   - This will generate an Overview.csv file in the out directory with the tickers of undervalued stocks.
+  ```
+   - This will generate an **Overview.csv** file in the **out** directory with the tickers of undervalued stocks.
 
 **Run the sentiment analysis script:**
+  ```sh
   python sentiment_analysis.py
-   - This will generate individual CSV files for each ticker in the out directory, containing news article titles and their sentiment analysis.
+  ```
+   - This will generate individual CSV files for each ticker in the **out** directory, containing news article titles and their sentiment analysis.
 
 
 
