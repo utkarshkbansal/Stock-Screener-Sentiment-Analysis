@@ -4,6 +4,7 @@ from goose3 import Goose
 from requests import get
 import pandas as pd
 import os
+import matplotlib.pyplot as plt
 
 def get_ticker_news_sentiment(ticker):
     """
@@ -35,11 +36,30 @@ def get_ticker_news_sentiment(ticker):
     df = pd.DataFrame(data)
     return df
 
+def plot_sentiment_distribution(ticker, df):
+    """
+    Plots the sentiment distribution of the given ticker's news articles.
+
+    Args:
+        ticker (string)
+        df (pd.DataFrame): Dataframe containing the news articles and their sentiment
+    """
+    sentiment_counts = df['Article sentiment'].value_counts()
+    plt.figure(figsize=(10, 5))
+    sentiment_counts.plot(kind='bar', color=['green', 'red', 'gray'])
+    plt.title(f'Sentiment Distribution for {ticker}')
+    plt.xlabel('Sentiment')
+    plt.ylabel('Number of Articles')
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+    plt.show()
+
 def generate_csv(ticker):
     df = get_ticker_news_sentiment(ticker)
     if not os.path.exists('out'):
         os.makedirs('out')
     df.to_csv(f'out/{ticker}.csv', index=False)
+    plot_sentiment_distribution(ticker, df)
 
 if __name__ == "__main__":
     from stock_screener import get_undervalued_stocks
