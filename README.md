@@ -1,6 +1,6 @@
 # Stock Screener & Sentiment Analysis
 
-This project includes a Python-based stock screener and sentiment analysis tool to identify undervalued stocks and analyze their sentiment using financial news articles. It uses the `finvizfinance` library for stock screening and the `transformers` library with a pre-trained FinBERT model for sentiment analysis.
+This project includes a Python-based stock screener and AI-based sentiment analysis tool to identify undervalued stocks and analyze their sentiment using financial news articles. It uses the `finvizfinance` library for stock screening and the `transformers` library with a pre-trained FinBERT model for sentiment analysis.
 
 ## Getting Started
 
