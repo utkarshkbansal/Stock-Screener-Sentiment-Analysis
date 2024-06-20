@@ -17,11 +17,11 @@ This project includes a Python-based stock screener and sentiment analysis tool 
    git clone https://github.com/your-username/stock-screener-sentiment-analysis.git
    cd stock-screener-sentiment-analysis
 2. **Create an activate a virtual environment**
-   python -m venv venv
-  source venv/bin/activate   # On macOS/Linux
-  .\venv\Scripts\activate    # On Windows
+    - python -m venv venv
+    - source venv/bin/activate   # On macOS/Linux
+    - .\venv\Scripts\activate    # On Windows
 3. **Install the dependencies**
-   pip install -r requirements.txt
+    - pip install -r requirements.txt
 
 ### Usage
 
