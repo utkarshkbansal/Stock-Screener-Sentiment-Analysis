@@ -1,0 +1,6 @@
+finvizfinance
+pandas
+transformers
+yfinance
+goose3
+requests
