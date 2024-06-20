@@ -4,3 +4,6 @@ transformers
 yfinance
 goose3
 requests
+torch
+torchvision
+torchaudio
