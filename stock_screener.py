@@ -23,7 +23,6 @@ def get_undervalued_stocks():
 
 def visualize_overview_data():
     df = pd.read_csv('out/Overview.csv')
-    # Example visualization: Distribution of stocks by sector
     sector_counts = df['Sector'].value_counts()
     plt.figure(figsize=(10, 5))
     sector_counts.plot(kind='bar')
