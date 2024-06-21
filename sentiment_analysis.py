@@ -7,16 +7,6 @@ import os
 import matplotlib.pyplot as plt
 
 def get_ticker_news_sentiment(ticker):
-    """
-    Returns a Pandas dataframe of the given ticker's most recent news article headlines,
-    with the overall sentiment of each article.
-
-    Args:
-        ticker (string)
-
-    Returns:
-        pd.DataFrame: {'Date', 'Article title', 'Article sentiment'}
-    """
     ticker_news = yf.Ticker(ticker)
     news_list = ticker_news.get_news()
     extractor = Goose()
@@ -37,13 +27,6 @@ def get_ticker_news_sentiment(ticker):
     return df
 
 def plot_sentiment_distribution(ticker, df):
-    """
-    Plots the sentiment distribution of the given ticker's news articles.
-
-    Args:
-        ticker (string)
-        df (pd.DataFrame): Dataframe containing the news articles and their sentiment
-    """
     sentiment_counts = df['Article sentiment'].value_counts()
     plt.figure(figsize=(10, 5))
     sentiment_counts.plot(kind='bar', color=['green', 'red', 'gray'])
