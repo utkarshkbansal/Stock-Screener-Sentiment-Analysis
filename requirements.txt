@@ -2,7 +2,8 @@ finvizfinance
 pandas
 transformers
 yfinance
-goose3
+goose3>=3.1.19
+pyahocorasick>=2.2.0  # ensure a prebuilt wheel exists for CPython 3.13 on Windows
 requests
 torch
 torchvision
